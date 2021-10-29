@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestHarbor.Data", "InvestHarbor.Data\InvestHarbor.Data.csproj", "{39325640-82BB-44D0-8910-A6C0D1D4243C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestHarbor.Site", "InvestHarbor.Site\InvestHarbor.Site.csproj", "{7ADEAEB7-857A-4ACE-A12D-8D1AF1C60784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestHarbor.Service", "InvestHarbor.Service\InvestHarbor.Service.csproj", "{042EC589-33A1-4298-BE17-C0C08DD27C6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39325640-82BB-44D0-8910-A6C0D1D4243C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39325640-82BB-44D0-8910-A6C0D1D4243C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39325640-82BB-44D0-8910-A6C0D1D4243C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39325640-82BB-44D0-8910-A6C0D1D4243C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ADEAEB7-857A-4ACE-A12D-8D1AF1C60784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADEAEB7-857A-4ACE-A12D-8D1AF1C60784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADEAEB7-857A-4ACE-A12D-8D1AF1C60784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADEAEB7-857A-4ACE-A12D-8D1AF1C60784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042EC589-33A1-4298-BE17-C0C08DD27C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042EC589-33A1-4298-BE17-C0C08DD27C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042EC589-33A1-4298-BE17-C0C08DD27C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042EC589-33A1-4298-BE17-C0C08DD27C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D11B20A-E55A-4B50-8F62-5D14DCC6E252}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/codetie
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = InvestHarbor.Data\\InvestHarbor.Data.csproj
+		SccProjectName1 = InvestHarbor.Data
+		SccLocalPath1 = InvestHarbor.Data
+		SccProjectUniqueName2 = InvestHarbor.Site\\InvestHarbor.Site.csproj
+		SccProjectName2 = InvestHarbor.Site
+		SccLocalPath2 = InvestHarbor.Site
+		SccProjectUniqueName3 = InvestHarbor.Service\\InvestHarbor.Service.csproj
+		SccProjectName3 = InvestHarbor.Service
+		SccLocalPath3 = InvestHarbor.Service
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InvestHarbor.Site</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="menu bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <div class="row menu d-flex align-items-center">
+                    <div class="col-4">
+                        <span class="nome">Blue Harbor</span>
+                    </div>
+                    <div class="col-4">
+                        <span class="item-menu"><i class="far fa-file-alt t-18 icones-menu"></i> Resumo</span>
+                        <span class="item-menu"><i class="far fa-chart-bar t-18 icones-menu"></i> Relatórios</span>
+                        <span class="item-menu"><i class="fa fa-exchange-alt t-18 icones-menu"></i> Operações</span>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col-1">
+                        <i class="far fa-bell t-18 icones-menu"></i>
+                        <i class="far fa-user-circle t-18 icones-menu"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/font-awesome/js/all.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

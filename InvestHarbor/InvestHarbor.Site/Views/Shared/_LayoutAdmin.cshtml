@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InvestHarbor.Site</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/noty/noty.min.css" />
+    <link rel="stylesheet" href="~/lib/select2/css/select2.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="menu bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <div class="row menu d-flex align-items-center">
+                    <div class="col-3">
+                        <span class="nome">Blue Harbor</span>
+                        <span class="sub-nome">Admin</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="item-menu"><a href="/Investimento" style="text-decoration: none; color: black;"><i class="fas fa-coins t-18 icones-menu"></i> Investimentos</a></span>
+                        <span class="item-menu"><a href="/Carteira" style="text-decoration: none; color: black;"><i class="fas fa-wallet t-18 icones-menu"></i> Carteiras</a></span>
+                        <span class="item-menu"><a href="/Cliente" style="text-decoration: none; color: black;"><i class="fas fa-user t-18 icones-menu"></i> Clientes</a></span>
+                        <span class="item-menu"><a href="/Ordem" style="text-decoration: none; color: black;"><i class="fas fa-receipt t-18 icones-menu"></i> Ordens</a></span>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-1">
+                        <i class="far fa-bell t-18 icones-menu"></i>
+                        <i class="far fa-user-circle t-18 icones-menu"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/font-awesome/js/all.min.js"></script>
+    <script src="~/lib/noty/noty.min.js"></script>
+    <script src="~/lib/select2/js/select2.full.min.js"></script>
+    <script src="~/lib/select2/js/i18n/pt-BR.min.js"></script>
+    <script src="~/js/componentes/consultas.js"></script>
+
+    <environment include="Development">
+        <script src="~/lib/vue/vue.js"></script>
+    </environment>
+    <environment include="Production">
+        <script src="~/lib/vue/vue.min.js"></script>
+    </environment>
+
+    <script src="~/js/componentes/select2.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

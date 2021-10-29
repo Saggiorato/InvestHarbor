@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Ordens";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container" id="ordem">
+    <form>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="form-group">
+                    <label for="fundo" class="login-sub-texto">Fundo</label>
+                    <select2 type="text" class="form-control" id="fundo" placeholder="" v-model="FundoId"></select2>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label for="valor" class="login-sub-texto">Valor</label>
+                    <input type="text" class="form-control" id="valor" placeholder="" v-model="Valor" />
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label for="porcentagem" class="login-sub-texto">Porcentagem</label>
+                    <input type="text" class="form-control" id="porcentagem" placeholder="" v-model="Porcentagem" />
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="login-sub-texto">&nbsp;</label>
+                    <div class="clearfix"></div>
+                    <button type="button" class="btn btn-primary" v-on:click="Filtrar"><i class="fas fa-arrow-up"></i> Executar</button> &nbsp;
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="cliente-filtro" class="login-sub-texto">Cliente</label>
+                    <input type="text" class="form-control" id="cliente-filtro" placeholder="" v-model="ClienteFiltro" />
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label for="valor-disponivel" class="login-sub-texto">Valor Disponível</label>
+                    <input type="text" class="form-control" id="valor-disponivel" placeholder="" v-model="ValorDisponivel" />
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="login-sub-texto">&nbsp;</label>
+                    <div class="clearfix"></div>
+                    <button type="button" class="btn btn-info" v-on:click="Filtrar"><i class="fas fa-search"></i> Filtrar</button> &nbsp;
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Valor disponível</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in Clientes">
+                        <td>{{item.Nome}}</td>
+                        <td>{{item.SaldoAtual}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <environment include="Development">
+        <script src="~/js/vue/ordem/ordem.js"></script>
+    </environment>
+    <environment include="Production">
+        <script src="~/js/vue/ordem/ordem.js" asp-append-version="true"></script>
+    </environment>
+}

@@ -1,0 +1,52 @@
+﻿@font-face {
+    font-family: 'Mulish';
+    src: url('../lib/fonts/Mulish-VariableFont_wght.ttf'); /*URL to font*/
+}
+
+* {
+    font-family: Mulish;
+}
+
+.nome {
+    color: #0466C8 !important;
+    height: 50px;
+    font-size: 20px;
+}
+
+.sub-nome {
+    color: black !important;
+    height: 50px;
+    font-size: 15px;
+}
+
+.menu {
+    height: 50px;
+}
+
+.icones-menu {
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.item-menu {
+    margin-right: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.t-24 {
+    font-size: 24px;
+}
+
+.t-20 {
+    font-size: 20px;
+}
+
+.t-18 {
+    font-size: 20px;
+}
+
+.modal{
+    margin-top: 10%;
+}

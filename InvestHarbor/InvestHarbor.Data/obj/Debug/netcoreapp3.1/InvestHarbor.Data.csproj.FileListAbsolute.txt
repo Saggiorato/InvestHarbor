@@ -1,0 +1,12 @@
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\bin\Debug\netcoreapp3.1\InvestHarbor.Data.deps.json
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\bin\Debug\netcoreapp3.1\InvestHarbor.Data.dll
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\bin\Debug\netcoreapp3.1\InvestHarbor.Data.pdb
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\obj\Debug\netcoreapp3.1\InvestHarbor.Data.AssemblyInfoInputs.cache
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\obj\Debug\netcoreapp3.1\InvestHarbor.Data.AssemblyInfo.cs
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\obj\Debug\netcoreapp3.1\InvestHarbor.Data.csproj.CoreCompileInputs.cache
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\obj\Debug\netcoreapp3.1\InvestHarbor.Data.dll
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\obj\Debug\netcoreapp3.1\InvestHarbor.Data.pdb
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\obj\Debug\netcoreapp3.1\InvestHarbor.Data.csproj.AssemblyReference.cache
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\bin\Debug\netcoreapp3.1\InvestHarbor.Data.runtimeconfig.json
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\bin\Debug\netcoreapp3.1\InvestHarbor.Data.runtimeconfig.dev.json
+C:\Users\Alisson\source\Workspaces\InvestHarbor\InvestHarbor\InvestHarbor.Data\obj\Debug\netcoreapp3.1\InvestHarbor.Data.genruntimeconfig.cache

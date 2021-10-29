@@ -1,0 +1,17 @@
+﻿.wrapper-login {
+    height: 98vh;
+}
+
+.login-box {
+    border: 1px solid #cdd4e0;
+    width: 360px;
+    padding: 30px 35px;
+}
+
+.nome {
+    color: #0466C8
+}
+
+.login-sub-texto {
+    color: #969191;
+}

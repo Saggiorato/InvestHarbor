@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Carteiras";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container" id="carteira">
+    <form>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="carteira" class="login-sub-texto">Carteira</label>
+                    <input type="text" class="form-control" id="carteira" placeholder="" v-model="Carteira">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label for="investimento" class="login-sub-texto">Investimento</label>
+                    <input type="text" class="form-control" id="investimento" placeholder="" v-model="Investimento">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="login-sub-texto">&nbsp;</label>
+                    <div class="clearfix"></div>
+                    <button type="button" class="btn btn-info" v-on:click="Filtrar"><i class="fas fa-search"></i> Filtrar</button> &nbsp;
+                    <button type="button" class="btn btn-primary" v-on:click="AbrirModalCadastro"><i class="fas fa-plus"></i> Criar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in Carteiras">
+                        <td>{{item.Nome}}</td>
+                        <td>{{item.Descricao}}</td>
+                        <td>{{item.DescricaoTipo}}</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm" v-on:click="Editar(item)"><i class="fas fa-pen"></i></button> &nbsp;
+                            <button type="button" class="btn btn-danger btn-sm" v-on:click="Excluir(item.Id, index)"><i class="far fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-cadastro" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adicionar um investimento a carteira</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label for="nome" class="login-sub-texto">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="" v-model="Nome">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label for="descricao" class="login-sub-texto">Descrição</label>
+                                    <input type="text" class="form-control" id="descricao" placeholder="" v-model="Descricao">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label for="limiteUtilizacao" class="login-sub-texto">Limite de Utilização</label>
+                                    <input type="text" class="form-control" id="limiteUtilizacao" placeholder="" v-model="LimiteUtilizacao">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="form-group">
+                                    <label for="investimento-select" class="login-sub-texto">Investimento</label>
+                                    <select2 class="form-control" id="investimento-select" :options="Investimentos" v-model="InvestimentoId">
+                                        <option value="">Selcione</option>
+                                    </select2>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label for="porcentagem" class="login-sub-texto">Porcentagem</label>
+                                    <input type="text" class="form-control" id="porcentagem" placeholder="" v-model="PorcentagemCarteira">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label class="login-sub-texto">&nbsp;</label>
+                                    <div class="clearfix"></div>
+                                    <button type="button" class="btn btn-primary" v-on:click="AdicionarInvestimento"><i class="fas fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nome</th>
+                                            <th scope="col">Porcentagem</th>
+                                            <th scope="col">Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(item, index) in CarteiraInvestimentos">
+                                            <td>{{item.Nome}}</td>
+                                            <td>{{item.PorcentagemCarteira}} %</td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-sm" v-on:click="ExcluirInvestimento(item.Id, index)"><i class="far fa-trash-alt"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" v-on:click="Adicionar"><i class="far fa-save"></i> Salvar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <environment include="Development">
+        <script src="~/js/vue/carteira/carteira.js"></script>
+    </environment>
+    <environment include="Production">
+        <script src="~/js/vue/carteira/carteira.min.js" asp-append-version="true"></script>
+    </environment>
+}

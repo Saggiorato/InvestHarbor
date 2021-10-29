@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "_LayoutDeslogado";
+}
+
+<div class="row justify-content-center wrapper-login" id="login">
+    <div class="col-2 align-self-center login-box">
+        <form>
+            <div class="form-group">
+                <h4 class="nome">BLUE HARBOR</h4>
+                <p class="login-sub-texto">Faça login para continuar</p>
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="cpf" class="login-sub-texto">CPF (123)</label>
+                <input type="email" class="form-control" id="cpf" placeholder="" v-model="Cpf" v-on:keyup.enter="Acessar">
+            </div>
+            <div class="form-group">
+                <label for="senha" class="login-sub-texto">Senha (123)</label>
+                <input type="password" class="form-control" id="senha" placeholder="" v-model="Senha" v-on:keyup.enter="Acessar">
+            </div>
+            <button type="button" class="btn btn-primary btn-block" v-on:click="Acessar">Acessar</button>
+            <div class="form-group">
+                <label class="login-sub-texto">* create local db with migrations</label>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/vue/login/login.js"></script>
+}

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Cliente";
+    Layout = "_LayoutDeslogado";
+}
+
+<div class="row justify-content-center wrapper-login" id="cadastro-cliente">
+    <div class="col-8 align-self-center login-box">
+        <form>
+            <div class="form-group">
+                <h4 class="nome">BLUE HARBOR</h4>
+                <p class="login-sub-texto">Realize o seu cadastro</p>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="nome" class="login-sub-texto">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="" v-model="Nome">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="sobrenome" class="login-sub-texto">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome" placeholder="" v-model="Sobrenome">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="cpf" class="login-sub-texto">CPF</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="" v-model="Cpf">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="dataNascimento" class="login-sub-texto">Data de Nascimento</label>
+                        <input type="text" class="form-control" id="dataNascimento" placeholder="" v-model="DataNascimento">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="cep" class="login-sub-texto">CEP</label>
+                        <input type="text" class="form-control" id="cep" placeholder="" v-model="Cep">
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-block" v-on:click="Confirmar">Confirmar</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/vue/cadastro/cadastro-cliente.js"></script>
+}

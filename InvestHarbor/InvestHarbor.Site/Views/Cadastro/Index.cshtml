@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Cadastro";
+    Layout = "_LayoutDeslogado";
+}
+
+<div class="row justify-content-center wrapper-login" id="cadastro">
+    <div class="col-6 align-self-center login-box">
+        <form>
+            <div class="form-group">
+                <h4 class="nome">BLUE HARBOR</h4>
+                <p class="login-sub-texto">Finalize o seu cadastro</p>
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="email" class="login-sub-texto">E-mail</label>
+                <input type="email" autocomplete="on" class="form-control" id="email" placeholder="" v-model="Email">
+            </div>
+            <div class="form-group">
+                <label for="telefone" class="login-sub-texto">Telefone</label>
+                <input type="text" class="form-control" id="telefone" placeholder="" v-model="Telefone">
+            </div>
+            <div class="form-group">
+                <label for="senha" class="login-sub-texto">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="" v-model="Senha">
+            </div>
+            <div class="form-group">
+                <label for="confirmacao" class="login-sub-texto">Confirme a senha</label>
+                <input type="password" class="form-control" id="confirmacao" placeholder="" v-model="Confirmacao">
+            </div>
+            <button type="button" class="btn btn-primary btn-block" v-on:click="Confirmar">Confirmar</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/vue/cadastro/cadastro.js"></script>
+}
